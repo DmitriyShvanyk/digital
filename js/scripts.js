@@ -138,6 +138,12 @@
 		});
 	}
 
+	const selectElements = document.querySelectorAll('.js-choice');
+	for(let i = 0; i < selectElements.length; i++){
+		new Choices(selectElements[i]);
+	}	
+	
+
 	// scroll anchor
 	$(document).on('click', '.js-scroll', function (e) {
 		e.preventDefault();
