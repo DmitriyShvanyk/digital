@@ -1,0 +1,10 @@
+<svg width="327" height="312" viewBox="0 0 327 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1" fill="white">
+<rect width="327" height="373" rx="4"/>
+</mask>
+<rect width="327" height="373" rx="4" fill="#F5F7F7" stroke="white" stroke-width="44" mask="url(#path-1-inside-1)"/>
+<rect x="263" y="232" width="22" height="199" transform="rotate(90 263 232)" fill="white"/>
+<rect x="231" y="181" width="22" height="167" transform="rotate(90 231 181)" fill="white"/>
+<rect x="188" y="134" width="22" height="124" transform="rotate(90 188 134)" fill="white"/>
+<rect x="64" y="83" width="199" height="22" fill="white"/>
+</svg>
