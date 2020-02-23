@@ -828,7 +828,8 @@ img {
 /* btn-up */
 
 .btn-up{
-  position: fixed; bottom: 15%; right: 30px;
+  cursor: pointer;
+  position: fixed; bottom: 18%; right: 30px;
   color: #232323;
   text-decoration: none;
   transform: rotate(-90deg);
@@ -990,6 +991,105 @@ img {
 }
 .b-lazy.b-loaded {
   opacity: 1;
+}
+
+
+
+
+/* alert */
+
+.alert{
+  color: #232323;
+  background-color: #E7E7E7;
+  padding: 16px;
+  border-radius: 0;
+}
+
+.alert::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: -9px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 9px 7px 0;
+  border-color: transparent #E7E7E7 transparent transparent;
+}
+
+.alert p{
+  margin: 0;
+}
+
+
+
+
+
+/* cookie */
+
+.cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4D4D4D;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, .08);
+  color: #E7E7E7;
+  font-size: 12px;
+  line-height: 1.5;
+  z-index: 999;
+}
+
+.cookie__container {
+  padding: 13px 15px;
+}
+
+.cookie__columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cookie__text{
+  margin: 0;
+}
+
+.cookie__btn-read-more{
+  color: #FE4B54;
+  min-width: 100px;
+}
+
+.cookie__btn-read-more:hover,
+.cookie__btn-read-more:focus,
+.cookie__btn-read-more:active{
+  color: #FE4B54;
+  text-decoration: underline;
+}
+
+.cookie__btn-ok{
+  min-width: 65px;
+  color: #D4D4D4;
+}
+
+@media (max-width:1024px){
+  .cookie {
+    font-size: 10px;
+  }
+}
+
+@media (max-width:374px){
+  .cookie {
+    font-size: 8px;
+  }
+  .cookie__btn-read-more,
+  .cookie__btn-ok{
+    font-size: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .cookie__btn-ok{
+    min-width: 35px;
+  }
 }
 
 /*-------------------------------------------------*/
@@ -2842,13 +2942,15 @@ h6 {
 }
 
 .page-faq__item{
+  display: block;
   background-color: #fff;
   font-weight: 700;
-  padding: 16px;
+  padding: 16px 16px 35px 16px;
   min-height: 163px;
   margin-left: 9px;
   margin-bottom: 24px;
   position: relative;
+  color: #232323;
 }
 
 .page-faq__item::before {
@@ -2861,6 +2963,32 @@ h6 {
   border-style: solid;
   border-width: 7px 9px 7px 0;
   border-color: transparent #fff transparent transparent;
+}
+
+.page-faq__read-answer{  
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #FE4B54;
+  padding: 6px 15px;
+  border-bottom: 2px solid #FE4B54;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.page-faq__item:hover,
+.page-faq__item:focus,
+.page-faq__item:active{
+  color: #232323;
+  text-decoration: none;
+}
+
+.page-faq__item:hover .page-faq__read-answer,
+.page-faq__item:focus .page-faq__read-answer,
+.page-faq__item:active .page-faq__read-answer{
+  color: #FE4B54;
+  opacity: 1;
 }
 
 @media (max-width:576px) {
