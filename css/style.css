@@ -927,6 +927,64 @@ h6 {
 
 
 
+/* job-app */
+
+.job-app{
+  background-color: #fff;
+  border-bottom: 1px solid #F3F3F5;
+}
+
+.job-app__container{
+  padding-top: 35px;
+}
+
+.job-app__title,
+.job-app__text{
+  margin-bottom: 33px;
+}
+
+
+
+/* now-need */
+
+.now-need__item{
+  padding-left: 40px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.now-need__arrow{
+  position: absolute; top: 8px; left: 0;
+  width: 14px;
+  height: 2px;
+  background-color: #A2A1A1;
+}
+
+.now-need__arrow::before{
+  content: '';
+  position: absolute; top: 50%; right: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #A2A1A1;
+  border-left: none;
+  border-bottom: none;
+  transform: rotate(45deg);
+  margin-top: -5px;
+}
+
+.now-need__title{
+  font-weight: 700;
+}
+
+.now-need__text{
+  font-size: 12px;
+  color: #A2A1A1;
+}
+
+
+
+
+
 
 
 
@@ -1250,13 +1308,17 @@ h6 {
   margin-top: 25px;
 }
 
-.header--inner-page .header__container{
+
+
+.header-inner-page__container{
   padding-top: 38px;
+  padding-bottom: 55px;
 }
 
-.header--inner-page .header__content {
-  margin-top: 23px;
+.header-inner-page__text{
+  max-width: 385px;
 }
+
 
 @media (max-width:1024px) {
   .header::before {
@@ -2624,21 +2686,29 @@ h6 {
 
 
 
+
+
+
 /*-------------------------------------------------*/
 /* =  page-faq.begin
 /*-------------------------------------------------*/
 
-.page-faq{
+.page-faq .header{
   min-height: 640px;
 }
 
-.page-faq::before {
+.page-faq .header::before {
   background-image: url(../img/faq.png);
   background-position: top 35px right 0%;
 }
 
-.page-faq__container{
+.page-faq .header__container{
   padding-bottom: 32px;
+  padding-top: 38px;
+}
+
+.page-faq .header__content {
+  margin-top: 23px;
 }
 
 .page-faq__inner{
@@ -2688,7 +2758,7 @@ h6 {
 }
 
 @media (max-width:576px) {
-  .page-faq__container {
+  .page-faq .header__container {
     padding-bottom: 25px;
   }
 
@@ -2744,23 +2814,17 @@ h6 {
 
 
 
-.header-inner-page__container{
-  padding-top: 38px;
-  padding-bottom: 55px;
-}
-
-.header-inner-page__text{
-  max-width: 385px;
-}
-
-.page-team__form-search{
-  margin-top: 40px;
-  margin-bottom: 33px;
-}
 
 
 
 
+
+
+
+
+/*-------------------------------------------------*/
+/* =  join-team.begin
+/*-------------------------------------------------*/
 
 .join-team{
   background-color: #fff;
@@ -2782,65 +2846,53 @@ h6 {
   }
 }
 
-
-
-
-
-
-.now-need__item{
-  padding-left: 40px;
-  position: relative;
-  margin-top: 20px;
-}
-
-.now-need__arrow{
-  position: absolute; top: 8px; left: 0;
-  width: 14px;
-  height: 2px;
-  background-color: #A2A1A1;
-}
-
-.now-need__arrow::before{
-  content: '';
-  position: absolute; top: 50%; right: 0;
-  width: 10px;
-  height: 10px;
-  border: 2px solid #A2A1A1;
-  border-left: none;
-  border-bottom: none;
-  transform: rotate(45deg);
-  margin-top: -5px;
-}
-
-.now-need__title{
-  font-weight: 700;
-}
-
-.now-need__text{
-  font-size: 12px;
-  color: #A2A1A1;
-}
+/*-------------------------------------------------*/
+/* =  join-team.end
+/*-------------------------------------------------*/
 
 
 
 
 
 
+/*-------------------------------------------------*/
+/* =  page-team.begin
+/*-------------------------------------------------*/
 
-
-
-.job-app{
-  background-color: #fff;
-  border-bottom: 1px solid #F3F3F5;
-}
-
-.job-app__container{
-  padding-top: 35px;
-}
-
-.job-app__title,
-.job-app__text{
+.page-team__form-search{
+  margin-top: 40px;
   margin-bottom: 33px;
 }
 
+/*-------------------------------------------------*/
+/* =  page-team.end
+/*-------------------------------------------------*/
 
+
+
+
+
+/*-------------------------------------------------*/
+/* =  page-blog.begin
+/*-------------------------------------------------*/
+
+.page-blog .header-inner-page{
+  background-color: #fff;
+}
+
+.page-blog  .header-inner-page__container{
+  padding-bottom: 1px;
+}
+
+.page-blog .news__container{
+  padding-top: 1px;
+}
+
+.page-blog__form-search{
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+/*-------------------------------------------------*/
+/* =  page-blog.end
+/*-------------------------------------------------*/

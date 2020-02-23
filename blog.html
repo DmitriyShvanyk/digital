@@ -23,7 +23,7 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
-<body id="home" class="page-faq">
+<body id="home" class="page-blog">
 
 	<!--preloader.begin-->
 	<div class="preloader">
@@ -200,10 +200,10 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#">Медиа</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a class="nav-link" href="blog.html">Блог</a>
 						</li>
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link" href="faq.html">FAQ</a>
 						</li>
 						<li class="nav-item">
@@ -219,99 +219,38 @@
 		<!--navbar.end-->
 
 		<!--header.begin-->
-		<header class="header">
-			<div class="container header__container">
+		<header class="header-inner-page">
+			<div class="container header-inner-page__container">
 
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="/" class="breadcrumb-link">The Digital Journalists</a></li>
-						<li class="breadcrumb-item active" aria-current="page">FAQ</li>
+						<li class="breadcrumb-item active" aria-current="page">Блог</li>
 					</ol>
 				</nav>
 
-				<div class="header__content">
-					<h1 class="header__title">FAQ</h1>
-					<div class="line header__line"></div>
-					<p>Здесь вы можете найти ответы на часто задаваемые вопросы или задать свой вопрос.</p>
-				</div>
-
-				<div class="page-faq__inner">
-					<div class="page-faq__row">
-						<h5 class="page-faq__title">Перевод, языки, навыки, услуги.</h5>
-						<div class="page-faq__items">
-							<div class="row">
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis aenean eget enim interdum auctor quis
-										eu?
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit scelerisque dui tellus donec quis
-										enim non etiam. Posuere sapien viverra est nulla leo, metus pretium tristique.
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec sed sit ullamcorper placerat est?
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit scelerisque dui tellus donec quis
-										enim non etiam. Posuere sapien viverra est nulla leo, metus pretium tristique.
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec sed sit ullamcorper placerat est?
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec sed sit ullamcorper placerat est?
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="page-faq__row">
-						<h5 class="page-faq__title">Оплата. Гарантия.</h5>
-						<div class="page-faq__items">
-							<div class="row">
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis aenean eget enim interdum auctor quis
-										eu?
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit scelerisque dui tellus donec quis
-										enim non etiam. Posuere sapien viverra est nulla leo, metus pretium tristique.
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec sed sit ullamcorper placerat est?
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="page-faq__item">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-									</div>
-								</div>								
-							</div>
-						</div>
-
-					</div>
+				<div class="header-inner-page__content">
+					<h1 class="team__title">Блог</h1>		
+					
+					<form action="#" class="form-search page-blog__form-search">
+						<input type="search" class="form-control form-search__control"
+							placeholder="Поиск по статьям" required>
+						<button class="form-search__submit">
+							<svg class="form-search__submit-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M14.897 16.312C13.543 17.365 11.846 18 10 18C5.589 18 2 14.411 2 10C2 5.589 5.589 2 10 2C14.411 2 18 5.589 18 10C18 11.846 17.365 13.543 16.311 14.898L20.707 19.294L19.293 20.708L14.897 16.312ZM16 10C16 6.691 13.309 4 10 4C6.691 4 4 6.691 4 10C4 13.309 6.691 16 10 16C13.309 16 16 13.309 16 10ZM11.9998 10.0001C11.9998 9.46809 11.7908 8.96609 11.4118 8.58609C10.6558 7.83209 9.34583 7.83009 8.58583 8.58809L7.17383 7.17209C8.68683 5.66009 11.3118 5.66009 12.8258 7.17209C13.5838 7.93109 13.9998 8.93509 13.9998 10.0001H11.9998Z"
+									fill="#A2A1A1" />
+							</svg>
+						</button>
+						<svg class="form-search__icon-cross" width="24" height="24" viewBox="0 0 24 24" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<rect x="5.63599" y="4.22182" width="20" height="2" transform="rotate(45 5.63599 4.22182)"
+								fill="#4D4D4D" />
+							<rect x="19.7781" y="5.63604" width="20" height="2" transform="rotate(135 19.7781 5.63604)"
+								fill="#4D4D4D" />
+						</svg>
+					</form>
 				</div>
 
 			</div>
@@ -321,50 +260,214 @@
 		<!--content.begin-->
 		<main class="content">
 
-			<!--ask-question.begin-->
-			<section class="ask-question">
-				<div class="container ask-question__container">
+			<!--news.begin-->
+			<section class="news">
+				<div class="container news__container">					
 
-					<h3 class="ask-question__title">Не нашли ответа на свой вопрос?</h3>
-					<div class="line ask-question__line"></div>
-					<p class="ask-question__text">Напишите нам и наш менеджер ответит на него в ближайшее время.</p>
-
-					<form action="#" class="form-faq" method="POST">
+					<div class="news__items">
 						<div class="row">
-							<div class="col-lg-6">
-								<div class="form-item">
-									<input type="text" class="form-control" name="nameFaq" placeholder="Представьтесь пожалуйста"
-										required>
-								</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/01.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
 							</div>
-							<div class="col-lg-6">
-								<div class="form-item">
-									<input type="email" class="form-control" name="emailFaq" placeholder="Введите ваш Email" required>
-								</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/02.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/03.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/04.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/05.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/06.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/07.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/08.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/09.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/10.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/11.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
+							</div>
+							<div class="col-lg-3 col-6">
+								<a href="#" class="news__item">
+									<div class="news__pict">
+										<img class="news__image" src="img/news/12.jpg" alt="">
+									</div>
+									<div class="news__content">
+										<div class="news__date">May 20, 2019 1:21 AM</div>
+										<h6 class="news__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+										<p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing mauris,
+											massa, congue
+											commodo. Pharetra non id turpis in erat scelerisque felis. Tempor ut risus.</p>
+									</div>
+									<span class="news__read">Читать</span>
+								</a>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="form-item">
-									<input type="text" class="form-control" name="nameAsk" placeholder="Задайте вопрос" required>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="form-item">
-									<select class="form-control js-select" name="subjectFaq" required>
-										<option value="">Выберите тему вопроса</option>
-										<option value="Тема №1">Тема №1</option>
-										<option value="Тема №2">Тема №2</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<button class="btn btn-danger form__submit">Отправить</button>
-					</form>
+					</div>					
 
 				</div>
 			</section>
-			<!--ask-question.end-->
+			<!--news.end-->
+
+			<!--subscribe.begin-->
+			<section class="subscribe">
+				<div class="container subscribe__container">
+					<h3 class="subscribe__title">Подписка на новости</h3>
+
+					<!--form-subscribe.begin-->
+					<form action="#" class="form-subscribe">
+						<input type="email" class="form-control form-subscribe__control" placeholder="Введите ваш Email" required>
+						<button class="btn form-subscribe__submit">Submit</button>
+					</form>
+					<!--form-subscribe.end-->
+
+				</div>
+			</section>
+			<!--subscribe.end-->
 
 		</main>
 		<!--content.end-->
@@ -569,6 +672,7 @@
 	<script src="js/jquery-migrate.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script src="js/select2.full.min.js"></script>
