@@ -209,97 +209,9 @@ img {
   margin: 20px 0 15px;
 }
 
-/*-------------------------------------------------*/
-/* =  basic.end
-/*-------------------------------------------------*/
 
 
-
-/*-------------------------------------------------*/
-/* =  typography.begin
-/*-------------------------------------------------*/
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Yeseva One', cursive;
-  margin-top: 0;
-}
-
-h1 {
-  font-size: 72px;
-  line-height: 1.11;
-}
-
-h2 {
-  font-size: 64px;
-  line-height: 1.125;
-}
-
-h3 {
-  font-size: 32px;
-  line-height: 1.25;
-}
-
-h4 {
-  font-size: 24px;
-  line-height: 1.333;
-}
-
-h5,
-h6 {
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 0;
-}
-
-h5 {
-  font-size: 14px;
-  line-height: 1.57;
-}
-
-.p-small,
-h6 {
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-@media (max-width:767px) {
-  h1 {
-    font-size: 64px;
-  }
-
-  h2 {
-    font-size: 54px;
-    line-height: 1.25;
-  }
-}
-
-@media (max-width:576px) {
-  h1 {
-    font-size: 54px;
-  }
-
-  h2 {
-    font-size: 40px;
-  }
-
-  h3 {
-    font-size: 26px;
-  }
-}
-
-/*-------------------------------------------------*/
-/* =  typography.end
-/*-------------------------------------------------*/
-
-
-
-
-
-/*-------------------------------------------------*/
-/* =  btn.begin
-/*-------------------------------------------------*/
+/* btn */
 
 .btn {
   font-weight: 500;
@@ -331,17 +243,24 @@ h6 {
   background-color: #FE4B54;
 }
 
-/*-------------------------------------------------*/
-/* =  btn.end
-/*-------------------------------------------------*/
+
+.btn-secondary{
+  border: 2px solid #A2A1A1;
+  background-color: transparent;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  color: #fff;
+  border-color: #A2A1A1;
+  background-color: #A2A1A1;
+}
 
 
 
 
-
-/*-------------------------------------------------*/
-/* =  dropdown.begin
-/*-------------------------------------------------*/
+/* dropdown */
 
 .dj-dropdown .dropdown-menu {
   min-width: 10rem;
@@ -362,15 +281,10 @@ h6 {
   border-top: 1px solid #E7E7E7;
 }
 
-/*-------------------------------------------------*/
-/* =  dropdown.end
-/*-------------------------------------------------*/
 
 
 
-
-
-
+/* breadcrumb */
 
 .breadcrumb{
   padding: 0;
@@ -405,6 +319,91 @@ h6 {
 
 
 
+
+/* b-share */
+
+.b-share__title{
+  font-weight: 700;
+  margin-bottom: 25px;  
+}
+
+.b-share__btn{
+  border: 2px solid #495EAD;
+  width: 100%;
+  margin-bottom: 16px;
+  padding-left: 56px;
+  text-align: left;
+  position: relative;
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+}
+
+.b-share__btn-icon{
+  color: #495EAD;
+  height: 18px;
+  position: absolute; top: 50%; left: 20px;
+  transform: translateY(-50%);
+  transition: color .3s ease;
+}
+
+.b-share__btn:hover,
+.b-share__btn:focus,
+.b-share__btn:active{
+  color: #fff;
+  background-color: #495EAD;
+  border-color: #495EAD;
+}
+
+.b-share__btn:hover .b-share__btn-icon,
+.b-share__btn:focus .b-share__btn-icon,
+.b-share__btn:active .b-share__btn-icon{
+  color: #fff;
+}
+
+
+.b-share__btn--in{
+  border-color: #0C75C3;
+}
+
+.b-share__btn--in .b-share__btn-icon{
+  color: #0C75C3;
+}
+
+.b-share__btn--in:hover,
+.b-share__btn--in:focus,
+.b-share__btn--in:active{
+  background-color: #0C75C3;
+  border-color: #0C75C3;
+}
+
+.b-share__btn--tlg{
+  border-color: #1EA8E9;
+}
+
+.b-share__btn--tlg .b-share__btn-icon{
+  color: #1EA8E9;
+}
+
+.b-share__btn--tlg:hover,
+.b-share__btn--tlg:focus,
+.b-share__btn--tlg:active{
+  background-color: #1EA8E9;
+  border-color: #1EA8E9;
+}
+
+.b-share__btn--tw{
+  border-color: #21A8EA;
+}
+
+.b-share__btn--tw .b-share__btn-icon{
+  color: #21A8EA;
+}
+
+.b-share__btn--tw:hover,
+.b-share__btn--tw:focus,
+.b-share__btn--tw:active{
+  background-color: #21A8EA;
+  border-color: #21A8EA;
+}
 
 
 
@@ -445,14 +444,12 @@ h6 {
   margin-top: 15px;
 }
 
-.form-order__label {
-  margin-top: 10px;
-}
 
 
 
 
 
+/* form input file */
 
 .file{
   display: block;  
@@ -554,8 +551,16 @@ h6 {
 
 
 
+/* form-order */
+
+.form-order__label {
+  margin-top: 10px;
+}
 
 
+
+
+/* form-job */
 
 .form-job__item{
   margin-bottom: 5px;
@@ -653,9 +658,6 @@ h6 {
 
 
 
-
-
-
 /* lang-list */
 
 .lang-list {
@@ -701,7 +703,7 @@ h6 {
 
 
 
-
+/* i-ok, .i-no */
 
 .i-ok,
 .i-no {
@@ -945,6 +947,7 @@ h6 {
 
 
 
+
 /* now-need */
 
 .now-need__item{
@@ -981,8 +984,89 @@ h6 {
   color: #A2A1A1;
 }
 
+/*-------------------------------------------------*/
+/* =  basic.end
+/*-------------------------------------------------*/
 
 
+
+/*-------------------------------------------------*/
+/* =  typography.begin
+/*-------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Yeseva One', cursive;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 1.11;
+}
+
+h2 {
+  font-size: 64px;
+  line-height: 1.125;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 1.333;
+}
+
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 1.57;
+}
+
+.p-small,
+h6 {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width:767px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 54px;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width:576px) {
+  h1 {
+    font-size: 54px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+}
+
+/*-------------------------------------------------*/
+/* =  typography.end
+/*-------------------------------------------------*/
 
 
 
@@ -1309,7 +1393,6 @@ h6 {
 }
 
 
-
 .header-inner-page__container{
   padding-top: 38px;
   padding-bottom: 55px;
@@ -1318,7 +1401,6 @@ h6 {
 .header-inner-page__text{
   max-width: 385px;
 }
-
 
 @media (max-width:1024px) {
   .header::before {
@@ -2896,3 +2978,174 @@ h6 {
 /*-------------------------------------------------*/
 /* =  page-blog.end
 /*-------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+/* =  article.begin
+/*-------------------------------------------------*/
+
+.page-article .header-inner-page__container{
+  padding-bottom: 1px;
+}
+
+.page-article .header-inner-page,
+.article{
+  background-color: #fff;
+}
+
+.article{
+  border-bottom: 1px solid #F3F3F5;
+}
+
+.article__container{
+  padding-top: 10px;
+}
+
+.article__title{
+  font-size: 32px;
+  margin-bottom: 17px;
+}
+
+.article__line{
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+.article__date{
+  color: #A2A1A1;
+  margin-bottom: 32px;
+}
+
+.article__pict{
+  margin-bottom: 35px;
+}
+
+.article__image{
+  width: 100%;
+}
+
+.article__item{
+  margin-bottom: 33px;
+}
+
+.article__text h2{
+  font-size: 24px;
+  line-height: 1.333;
+  margin-bottom: 20px;
+}
+
+.article__text p a{
+  color: #FE4B54;
+}
+
+.article__text p a:hover,
+.article__text p a:focus,
+.article__text p a:active{
+  color: #FE4B54;
+}
+
+.article__text ul,
+.article__text ol{
+  padding-left: 0;
+  list-style: none;
+}
+
+.article__text ul > li,
+.article__text ol > li{
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.article__text ul>li::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #FE4B54;
+}
+
+.article__text ol {
+  counter-reset: num;
+}
+
+.article__text ol>li:before {
+  content: counters(num, ".") ". "; 
+  counter-increment: num;
+  position: absolute; top: 0; left: 0;
+  font-weight: 700;
+}
+
+.article__text ol ol{
+  margin-top: 10px;
+}
+
+@media (max-width:576px){
+  .article__container{
+    padding-bottom: 20px;
+  }
+  .article__title {
+    font-size: 26px;
+  }
+  .article__item,
+  .article__pict{
+    margin-bottom: 25px;
+  }
+  .article__text h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+/*-------------------------------------------------*/
+/* =  article.end
+/*-------------------------------------------------*/
+
+
+
+
+
+
+/*-------------------------------------------------*/
+/* =  sidebar.begin
+/*-------------------------------------------------*/
+
+.sidebar__item{
+  margin-bottom: 32px;
+}
+
+.sidebar__btn-blog{
+  width: 100%;
+  margin: 13px 0;
+}
+
+@media (min-width:768px){
+  .sidebar{
+    padding-left: 95px;
+  }
+}
+
+@media (max-width:576px){ 
+  .sidebar__b-share{
+    margin-top: 45px;
+  }
+}
+
+/*-------------------------------------------------*/
+/* =  sidebar.end
+/*-------------------------------------------------*/
+
+
+
+
+
+
+
