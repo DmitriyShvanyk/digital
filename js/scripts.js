@@ -49,6 +49,7 @@
 			slideBy: 1,
 			dots: false,
 			lazyLoad: true,
+			autoHeight: true,
 			responsive: {
 				0: {
 					items: 1,
@@ -136,11 +137,6 @@
 				}
 			}
 		});
-	}
-
-	const selectElements = document.querySelectorAll('.js-choice');
-	for(let i = 0; i < selectElements.length; i++){
-		new Choices(selectElements[i]);
 	}	
 	
 
