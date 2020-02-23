@@ -16,11 +16,8 @@
 	<!-- favicon -->
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<!-- bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-
 	<!-- main style -->
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style.css?v=2" rel="stylesheet">
 </head>
 
 <body id="home" class="page-team">
@@ -212,8 +209,8 @@
 					</ul>
 				</div>
 
-				<div class="navbar-overlay" data-toggle="collapse" data-target="#navbarsCollapse"
-					aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation"></div>
+				<button class="navbar-overlay" data-toggle="collapse" data-target="#navbarsCollapse"
+					aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation"></button>
 			</div>
 		</nav>
 		<!--navbar.end-->
@@ -238,7 +235,6 @@
 				</div>
 
 				<div class="team__box">
-
 					<div class="team__columns">
 						<div class="team__column team__column--1">
 							<div class="team__item d-flex justify-content-end">
@@ -246,7 +242,7 @@
 							</div>
 							<div class="team__crewmam">
 								<div class="team__crewmam-pict">
-									<img class="team__crewmam-image img-fluid" src="img/team/keit.jpg" alt="">
+									<img class="team__crewmam-image img-fluid b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team/keit.jpg" alt="">
 								</div>
 								<div class="team__crewmam-name">Кейт</div>
 								<div class="team__crewmam-position">Главный редактор</div>
@@ -255,7 +251,7 @@
 						<div class="team__column team__column--2">
 							<div class="team__crewmam">
 								<div class="team__crewmam-pict">
-									<img class="team__crewmam-image img-fluid" src="img/team/liza.jpg" alt="">
+									<img class="team__crewmam-image img-fluid b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team/liza.jpg" alt="">
 								</div>
 								<div class="team__crewmam-name">Лиза</div>
 								<div class="team__crewmam-position">Редактор, американский английский</div>
@@ -265,7 +261,7 @@
 						<div class="team__column team__column--3">
 							<div class="team__crewmam">
 								<div class="team__crewmam-pict">
-									<img class="team__crewmam-image img-fluid" src="img/team/anna.jpg" alt="">
+									<img class="team__crewmam-image img-fluid b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team/anna.jpg" alt="">
 								</div>
 								<div class="team__crewmam-name">Анастасия</div>
 								<div class="team__crewmam-position">Руководитель отдела продаж</div>
@@ -275,7 +271,7 @@
 							<div class="team__square team__square--4"></div>
 							<div class="team__crewmam">
 								<div class="team__crewmam-pict">
-									<img class="team__crewmam-image img-fluid" src="img/team/inga.jpg" alt="">
+									<img class="team__crewmam-image img-fluid b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team/inga.jpg" alt="">
 								</div>
 								<div class="team__crewmam-name">Инга</div>
 								<div class="team__crewmam-position">Менеджер PR-кампаний в Китае</div>
@@ -284,7 +280,7 @@
 						<div class="team__column team__column--5">
 							<div class="team__crewmam">
 								<div class="team__crewmam-pict">
-									<img class="team__crewmam-image img-fluid" src="img/team/mat.jpg" alt="">
+									<img class="team__crewmam-image img-fluid b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team/mat.jpg" alt="">
 								</div>
 								<div class="team__crewmam-name">Мэтт</div>
 								<div class="team__crewmam-position">Редактор, британский английский</div>
@@ -408,7 +404,6 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</header>
 		<!--header.end-->
@@ -419,7 +414,9 @@
 			<!--join-team.begin-->
 			<section class="join-team">
 				<div class="container join-team__container">
-					<h3 class="join-team__title">Хотите присоединиться к нашей команде?</h3>
+					<h3 class="join-team__title">
+						Хотите присоединиться к нашей команде?
+					</h3>
 					<div class="line join-team__line"></div>
 					<p>Сейчас нам требуются:</p>
 
@@ -749,7 +746,7 @@
 										<div class="col-lg-9 col-md-8">
 											<div class="form-item">
 												<select class="form-control js-select" name="langJob" required>
-													<option value="Английский">Английский</option>
+													<option value="">Выбирете язык</option>
 													<option value="Английский">Английский</option>
 													<option value="Английский">Английский</option>
 													<option value="Английский">Английский</option>
@@ -775,7 +772,6 @@
 											</div>
 										</div>
 									</div>
-
 								</div>
 							</div>
 							<div class="form-item">
@@ -837,13 +833,12 @@
 		<footer class="footer">
 			<div class="footer__bg-1">
 				<div class="container footer__container">
-
 					<div class="footer__columns">
 						<div class="footer__column footer__column--1">
 							<a href="#home" class="footer__logo js-scroll">
 								<svg class="footer__logo-img" width="126" height="40" viewBox="0 0 126 40" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
-									<g clip-path="url(#clip0)">
+									<g clip-path="url(#clipLogoF)">
 										<path
 											d="M8.96561 18.5709C7.03659 18.7942 6.78577 18.9584 6.78577 21.274V30.3908C6.78577 33.5817 6.48479 36.2666 3.8626 38.3316C2.85039 39.1102 1.69192 39.6776 0.456033 39.9999L0 38.9515C0.713133 38.6865 1.33855 38.2286 1.80642 37.629C2.27429 37.0293 2.5662 36.3114 2.64955 35.5555C2.88681 33.8034 2.98744 32.0355 2.95053 30.2678V21.274C2.95053 18.9584 2.67691 18.7669 0.5518 18.5709V17.5498H8.96561V18.5709Z"
 											fill="#A2A1A1" />
@@ -913,7 +908,7 @@
 											fill="#A2A1A1" />
 									</g>
 									<defs>
-										<clipPath id="clip0">
+										<clipPath id="clipLogoF">
 											<path d="M0 0H125.263V40H0V0Z" fill="white" />
 										</clipPath>
 									</defs>
@@ -925,7 +920,6 @@
 							</div>
 						</div>
 						<div class="footer__column footer__column--2">
-
 							<ul class="footer__menu">
 								<li class="footer__menu-item"><a href="/" class="footer__menu-link">Главная</a></li>
 								<li class="footer__menu-item"><a href="#" class="footer__menu-link">О нас</a></li>
@@ -938,7 +932,6 @@
 								<li class="footer__menu-item"><a href="faq.html" class="footer__menu-link">FAQ</a></li>
 								<li class="footer__menu-item"><a href="#" class="footer__menu-link">Контакты</a></li>
 							</ul>
-
 						</div>
 						<div class="footer__column footer__column--3">
 							<div class="footer__support d-flex">
@@ -952,10 +945,10 @@
 							</div>
 						</div>
 						<div class="footer__column footer__column--4">
-
 							<div class="contact-info footer__contact-info">
-								<h5 class="contact-info__title">Контактная информация</h5>
-
+								<h5 class="contact-info__title">
+									Контактная информация
+								</h5>
 								<ul class="contact-info__list">
 									<li class="contact-info__list-item">
 										<a href="tel:+1321456987" class="contact-info__list-link">
@@ -997,17 +990,13 @@
 										</svg>
 									</a>
 								</div>
-
 							</div>
-
 							<div class="footer__copy d-block d-sm-none">
 								©2020. Digital Journalists. All rights reserved. Lorem ipsum dolor sit amet, consectetur adipiscing
 								elit. Tempus at amet elit auctor adipiscing sed non massa. Et et, lorem massa at semper.
 							</div>
-
 						</div>
 					</div>
-
 				</div>
 			</div>
 			<div class="footer__bg-2">
@@ -1035,7 +1024,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="js/blazy.min.js"></script>
+	<script src="js/scripts.js?v=2"></script>
 	<script src="js/select2.full.min.js"></script>
 	<script>
 		(function () {

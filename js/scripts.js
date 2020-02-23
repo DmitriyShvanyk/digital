@@ -150,4 +150,11 @@
 	});
 
 
+	// lazy load
+	var bLazy = new Blazy({
+		// Options
+		offset: 100
+	});	
+
+
 })();
