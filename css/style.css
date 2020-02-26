@@ -138,6 +138,11 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 /* =  basic.begin
 /*-------------------------------------------------*/
 
+html,
+body{
+  overflow-x: hidden;
+}
+
 body {
   background-color: #F6F6F7;
   color: #232323;
@@ -679,6 +684,7 @@ img {
 }
 
 .lang-list__item {
+  cursor: pointer;
   display: flex;
   align-items: center;
   font-size: 12px;
@@ -686,12 +692,17 @@ img {
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
   break-inside: avoid;
+  transition: transform .3s ease;
 }
 
 .lang-list__flag {
   width: 52px;
   height: 32px;
   margin-right: 24px;
+}
+
+.lang-list__item:hover{
+  transform: translateX(10px);
 }
 
 @media (max-width:767px) {
@@ -883,6 +894,35 @@ img {
 
 
 
+.social-widget{
+  display: flex;
+  flex-direction: column;
+  position: fixed; bottom: 12%; left: 2%;  
+  background-color: #F6F7F6;
+  padding: 5px;
+}
+
+.social-widget__icon{
+  width: 18px;
+  height: 18px;
+}
+
+.social-widget__link{
+  display: block;
+  color: #A2A1A1;
+  transition: color .3s ease;
+  padding: 5px;
+}
+
+.social-widget__link:hover,
+.social-widget__link:focus,
+.social-widget__link:active{
+  color: rgb(254, 75, 84);
+}
+
+
+
+
 /* contact-info */
 
 .contact-info__title{
@@ -949,6 +989,9 @@ img {
   padding-left: 40px;
   position: relative;
   margin-top: 20px;
+  display: block;
+  color: #232323;
+  transition: color .3s ease;
 }
 
 .now-need__arrow{
@@ -956,6 +999,7 @@ img {
   width: 14px;
   height: 2px;
   background-color: #A2A1A1;
+  transition: transform .3s ease, background-color .3s ease;
 }
 
 .now-need__arrow::before{
@@ -968,6 +1012,7 @@ img {
   border-bottom: none;
   transform: rotate(45deg);
   margin-top: -5px;
+  transition: border-color .3s ease;
 }
 
 .now-need__title{
@@ -977,6 +1022,35 @@ img {
 .now-need__text{
   font-size: 12px;
   color: #A2A1A1;
+}
+
+
+.now-need__item:hover,
+.now-need__item:focus,
+.now-need__item:active{
+  text-decoration: none;
+  color: #232323;
+}
+
+.now-need__item:focus,
+.now-need__item:active{
+  color: #FE4B54;
+}
+
+.now-need__item:hover .now-need__arrow,
+.now-need__item:focus .now-need__arrow,
+.now-need__item:active .now-need__arrow{
+  transform: translateX(10px);
+}
+
+.now-need__item:focus .now-need__arrow,
+.now-need__item:active .now-need__arrow{
+  background-color: #FE4B54;  
+}
+
+.now-need__item:focus .now-need__arrow::before,
+.now-need__item:active .now-need__arrow::before{
+  border-color: #FE4B54;
 }
 
 
@@ -1234,6 +1308,7 @@ h6 {
   border-radius: 0;
   padding: .532rem .574rem;
   min-width: 40px;
+  box-shadow: none;
 }
 
 #dj-navbar .dropdown-toggle::after {
@@ -1398,6 +1473,12 @@ h6 {
   width: 100%;
 }
 
+#dj-navbar .nav-link:hover,
+#dj-navbar .nav-link:focus,
+#dj-navbar .nav-link:active{
+  color: #4D4D4D;
+}
+
 @media (max-width:1200px) {
   #dj-navbar .container-fluid {
     padding-left: 24px;
@@ -1470,19 +1551,12 @@ h6 {
 .header {
   position: relative;
   background-color: #F6F7F6;
-  min-height: 644px;
+  min-height: 644px;  
 }
 
-.header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/header/header.png);
-  background-repeat: no-repeat;
-  background-position: center right;
+.header__image{
+  position: absolute; top: 50%; right: -100px;
+  transform: translateY(-50%);
 }
 
 .header__container {
@@ -1512,9 +1586,22 @@ h6 {
   max-width: 385px;
 }
 
+@media (max-width:1600px) {
+  .header__image{
+    right: -200px;
+  }
+}
+
+@media (max-width:1400px) {
+  .header__image{
+    right: -350px;
+  }
+}
+
 @media (max-width:1024px) {
-  .header::before {
-    background-size: 70%;
+  .header__image{
+    width: 70%;
+    right: -10%;
   }
 }
 
@@ -1523,15 +1610,19 @@ h6 {
     min-height: 1px;
   }
 
+  .header__image{
+    width: 100%;
+    right: 0;
+  }
+
   .header__content {
     margin-top: 0;
   }
 }
 
 @media (max-width:576px) {
-  .header::before {
+  .header__image {    
     opacity: .2;
-    background-size: 100%;
   }
 }
 
@@ -1541,7 +1632,102 @@ h6 {
 
 
 
+.anim__path-stroke{
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: dash 5s linear infinite;
+}
 
+@keyframes dash {
+  to {
+    stroke-dasharray: 0;    
+  }
+}
+
+
+
+
+.anim__path-zn,
+.anim__path-ar{
+  animation: animPathZn 10s linear infinite;  
+  opacity: 0;
+}
+
+.anim__path-ar{
+  animation-delay: 5s;   
+}
+
+@keyframes animPathZn{
+  0%{
+    transform: translateX(150px) translateY(150px);
+    opacity: 0;
+  }
+  25%{
+   opacity: .5;
+  }  
+  50%{
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(-100px) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.anim__path-quote,
+.anim__path-quote-red{
+  animation: animPathQuote 6s linear infinite;
+}
+
+@keyframes animPathQuote{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+.anim__g-t,
+.anim__g-i{    
+  transform: scale(.5);
+  animation: animGT 16s linear infinite;  
+}
+
+@keyframes animGT {
+  0%{
+    transform: scale(.9);
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(.9);
+  }
+}
+
+.anim__g-i{  
+  transform: scale(.8);
+  animation: animGI 16s linear infinite;  
+}
+
+@keyframes animGI {
+  0%{
+    transform: scale(.95);
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(.95);
+  }
+}
 
 
 
@@ -2347,15 +2533,24 @@ h6 {
 }
 
 .clients__title{
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
-.clients__item{
+.clients__item{  
   background-color: #fff;
+  transition: transform .3s ease;
 }
 
 .clients__image{
-  max-height: 127px;
+  max-height: 127px;  
+}
+
+.clients__item:hover{
+  transform: translateY(-10px);
+}
+
+.slider-clients .item{
+  padding-top: 10px;
 }
 
 /*-------------------------------------------------*/
@@ -2377,15 +2572,16 @@ h6 {
 }
 
 .media__title{
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 }
 
 .media__item{
+  padding-top: 10px;
   display: block;
   text-decoration: none;
   color: #232323;
   font-size: 12px;
-  transition: opacity .3s ease;
+  transition: transform .3s ease;
 }
 
 .media__image{
@@ -2406,10 +2602,10 @@ h6 {
 
 .media__item:hover,
 .media__item:focus,
-.media__item:active{
-  opacity: .7;
+.media__item:active{  
   text-decoration: none;
   color: #232323;
+  transform: translateY(-10px);
 }
 
 .slider-media{
@@ -2421,7 +2617,7 @@ h6 {
     margin-bottom: 25px;
   }  
   .media__title{
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   .media__image{
@@ -2531,6 +2727,7 @@ h6 {
   height: 2px;
   background-color: #A2A1A1;
   margin: -1px 0 0 0;
+  transition: background-color .3s ease;
 }
 
 .form-subscribe__submit::after{
@@ -2543,6 +2740,7 @@ h6 {
   border-bottom: none;
   margin-top: -5px;
   transform: rotate(45deg);
+  transition: border-color .3s ease;
 }
 
 .form-subscribe__submit:hover,
@@ -2550,6 +2748,13 @@ h6 {
 .form-subscribe__submit:active{
   outline: none;
   box-shadow: none;
+}
+
+.form-subscribe__submit:active::before{
+  background-color: #FE4B54;
+}
+.form-subscribe__submit:active::after{
+  border-color: #FE4B54;
 }
 
 @media (max-width:576px){
@@ -2650,6 +2855,11 @@ h6 {
 
 
 
+.footer__support{
+  color: #A2A1A1;
+  transition: color .3s ease;
+}
+
 .footer__support-pict{
   margin-right: 24px;
 }
@@ -2663,7 +2873,12 @@ h6 {
   margin-bottom: 5px;
 }
 
-
+.footer__support:hover,
+.footer__support:focus,
+.footer__support:active{
+  color: #fff;
+  text-decoration: none;
+}
 
 
 
@@ -2904,13 +3119,21 @@ h6 {
 }
 
 .page-faq .header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url(../img/faq.png);
-  background-position: top 35px right 0%;
+  background-repeat: no-repeat;
+  background-position: top 35px right 0;  
 }
 
 .page-faq .header__container{
   padding-bottom: 32px;
   padding-top: 38px;
+  position: relative;
 }
 
 .page-faq .header__content {
@@ -2991,7 +3214,18 @@ h6 {
   opacity: 1;
 }
 
+@media (max-width:1024px) {
+  .page-faq .header::before {
+    background-size: 70%;
+  }
+}
+
 @media (max-width:576px) {
+  .page-faq .header::before {
+    opacity: .2;
+    background-size: 100%;
+  }
+
   .page-faq .header__container {
     padding-bottom: 25px;
   }
@@ -3040,13 +3274,6 @@ h6 {
 /*-------------------------------------------------*/
 /* =  ask-question.end
 /*-------------------------------------------------*/
-
-
-
-
-
-
-
 
 
 

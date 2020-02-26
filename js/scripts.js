@@ -25,7 +25,7 @@
 		let scrollY;
 		const btnUp = document.querySelector('.btn-up');
 
-		window.addEventListener('scroll', function () {
+		window.addEventListener('scroll', () => {
 			scrollY = window.scrollY || window.pageYOffset;
 			if (scrollY > navbarHeight) {
 				navbar.classList.add('navbar-shadow');
