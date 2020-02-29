@@ -43,7 +43,7 @@
 	const sliderDoit = $('.slider-doit');
 	if (sliderDoit.length > 0) {
 		sliderDoit.owlCarousel({
-			loop: false,
+			loop: true,
 			margin: 0,
 			nav: false,
 			responsiveClass: true,
@@ -51,8 +51,8 @@
 			dots: false,
 			lazyLoad: true,
 			autoHeight: true,
-			animateOut: 'fadeOut',
-			animateIn: 'fadeIn',
+			//animateOut: 'fadeOut',
+			//animateIn: 'fadeIn',
 			autoplay: true,
 			autoplayTimeout: 3000,
 			autoplayHoverPause: true,
@@ -130,12 +130,15 @@
 	// slider clients
 	if ($('.slider-clients').length > 0) {
 		$('.slider-clients').owlCarousel({
-			loop: false,
+			loop: true,
 			margin: 24,
 			nav: false,
 			responsiveClass: true,
 			slideBy: 2,
 			lazyLoad: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true,
 			responsive: {
 				0: {
 					items: 2,
@@ -154,12 +157,15 @@
 	// slider media
 	if ($('.slider-media').length > 0) {
 		$('.slider-media').owlCarousel({
-			loop: false,
+			loop: true,
 			margin: 84,
 			nav: false,
 			responsiveClass: true,
 			slideBy: 1,
 			lazyLoad: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true,
 			responsive: {
 				0: {
 					items: 1,
