@@ -2166,6 +2166,16 @@ h6 {
   .news__item {
     margin-bottom: 35px;
   }
+
+  .news__read {
+    background-color: #FE4B54;
+    color: #fff;
+    padding: .719rem 1.451rem;
+  }
+  .news__read::after{
+    display: none;
+  }
+
 }
 
 /*-------------------------------------------------*/
