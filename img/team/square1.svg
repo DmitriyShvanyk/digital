@@ -1,0 +1,11 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64 80L64 64L80 64L80 80L64 80Z" fill="#E2DCDC"/>
+<path d="M32 80L32 64L48 64L48 80L32 80Z" fill="#E2DCDC"/>
+<path d="M0 80L-6.99382e-07 64L16 64L16 80L0 80Z" fill="#E2DCDC"/>
+<path d="M64 48L64 32L80 32L80 48L64 48Z" fill="#E2DCDC"/>
+<path d="M32 48L32 32L48 32L48 48L32 48Z" fill="#E2DCDC"/>
+<path d="M0 48L-6.99382e-07 32L16 32L16 48L0 48Z" fill="#E2DCDC"/>
+<path d="M64 16L64 0L80 -6.99382e-07L80 16L64 16Z" fill="#E2DCDC"/>
+<path d="M32 16L32 0L48 -6.99382e-07L48 16L32 16Z" fill="#E2DCDC"/>
+<path d="M0 16L-6.99382e-07 0L16 -6.99382e-07L16 16L0 16Z" fill="#E2DCDC"/>
+</svg>

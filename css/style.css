@@ -769,16 +769,19 @@ img {
 }
 
 @keyframes pulsePreloader {
-  0% {
-    opacity: 1;
+  0% {    
+    opacity: .1;
+    transform: translate(-50%, -50%) scale(.7);
   }
 
   50% {
-    opacity: .5;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(2.5);
   }
 
   100% {
-    opacity: 1;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(5);
   }
 }
 
@@ -787,41 +790,12 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40px;
-  height: 40px;
-  border: 2px solid rgba(0, 0, 0, .15);
-  border: 2px solid transparent;
-  border-radius: 50%;
   transform: translate(-50%, -50%);
-  box-sizing: border-box;
+  animation: pulsePreloader 3s linear infinite;
 }
 
-.preloader__icon::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  bottom: -2px;
-  right: -2px;
-  border: 2px solid #FE4B54;
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: rotate 2s linear infinite;
-}
 
-.preloader__icon::after {
-  content: 'Loading ...';
-  position: absolute;
-  top: calc(100% + 15px);
-  left: 50%;
-  text-align: center;
-  color: rgba(0, 0, 0, .85);
-  font-size: 12px;
-  text-align: center;
-  white-space: nowrap;
-  transform: translateX(-50%);
-  animation: pulsePreloader 1s linear infinite
-}
+
 
 
 
@@ -882,6 +856,10 @@ img {
 .btn-up--show{
   display: block;
   opacity: 1;
+}
+
+.btn-up--down{
+  right: 26px;
 }
 
 @keyframes pulseBtnUp{
@@ -2467,19 +2445,23 @@ h6 {
   padding-right: 12px;
 }
 
-.team__crewmam-pict {
+.team__crewman{
+  position: relative;
+}
+
+.team__crewman-pict {
   margin-bottom: 15px;
 }
 
-.team__crewmam-image {
+.team__crewman-image {
   width: 100%;
 }
 
-.team__crewmam-name {
+.team__crewman-name {
   font-weight: 700;
 }
 
-.team__crewmam-position {
+.team__crewman-position {
   font-size: 12px;
   line-height: 18px;
 }
@@ -2487,7 +2469,6 @@ h6 {
 .team__square {
   width: 76px;
   height: 76px;
-  background-color: #E0DADA;
   margin-bottom: 24px;
 }
 
@@ -2511,8 +2492,7 @@ h6 {
   margin-top: 53px;
 }
 
-.team__square--4 {
-  background-color: #A4357C;
+.team__square--4 {  
   margin-top: 100px;
 }
 
@@ -2579,6 +2559,19 @@ h6 {
   border-color: #fff;
 }
 
+.team__square-free {
+  display: none;
+  position: absolute;
+  top: calc(100% + 11px);
+  right: calc(100% + 22px);
+}
+
+@media (min-width:1200px) {
+  .team__square-free{
+    display: block;    
+  }
+}
+
 @media (min-width:992px) {
   .team__title {
     font-size: 72px;
@@ -2606,7 +2599,7 @@ h6 {
     max-width: 33.333%;
   }
 
-  .team__crewmam{
+  .team__crewman{
     margin-bottom: 25px;
   }
 
@@ -2618,14 +2611,14 @@ h6 {
     margin-bottom: 50px;
   }
 
-  .team__crewmam-pict{
+  .team__crewman-pict{
     padding-bottom: 100%;
     overflow: hidden;
     height: 0;
     position: relative;
   }
 
-  .team__crewmam-image{
+  .team__crewman-image{
     position: absolute; top: 0; left: 0;
     width: 100%;
     height: 100%;
@@ -3341,9 +3334,7 @@ h6 {
   outline: none;
 }
 
-.page-faq__item:hover .page-faq__read-answer,
-.page-faq__item:focus .page-faq__read-answer,
-.page-faq__item:active .page-faq__read-answer{
+.page-faq__item:hover .page-faq__read-answer{
   color: #FE4B54;
   opacity: 1;
 }

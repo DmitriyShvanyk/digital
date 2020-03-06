@@ -5,7 +5,7 @@
 	// preloader
 	function loadPage() {
 		return new Promise((resolve, reject) => {
-			setTimeout(resolve, 2000);
+			setTimeout(resolve, 3000);
 		});
 	}
 	const preloader = document.querySelector('.preloader');
@@ -35,8 +35,19 @@
 				btnUp.classList.remove('btn-up--show');
 			}
 		});
+
+		window.addEventListener('scroll', () => {
+			if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 300) {
+				btnUp.textContent = `Вверх`;
+				btnUp.classList.add('btn-up--down');
+			}
+			else{
+				btnUp.textContent = 'Scroll';
+				btnUp.classList.remove('btn-up--down');
+			}
+		});
 	}
-	addShadowNavbar();
+	addShadowNavbar();	
 
 
 	// slider team
